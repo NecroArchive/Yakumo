@@ -200,7 +200,7 @@ void held_cheats_frame(Ram &ram, const HeldCheats &cheats);
 bool cheat_command(const std::vector<std::string> &args, HeldCheats &cheats);
 
 // Actors the hold command keeps in place: put back once a frame, dropped when
-// an actor's vtable changes or the quest ends.
+// an actor's vtable changes, the hunter leaves its area or the quest ends.
 void held_actors_frame(Ram &ram);
 void release_held_actors();
 [[nodiscard]] std::size_t held_actor_count();
